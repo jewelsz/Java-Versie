@@ -1,5 +1,7 @@
 package Animals;
 
+import java.util.Date;
+
 public class Animal
 {
     public String Name;
@@ -16,8 +18,8 @@ public class Animal
     {
         if (this.ReservedBy == null)
         {
-            //Change DateTime.Now
-            //this.ReservedBy = new Reservor(reservedBy, DateTime.Now);
+            Date today = new Date();
+            this.ReservedBy = new Reservor(reservedBy, today);
             return true;
         }
         return false;
